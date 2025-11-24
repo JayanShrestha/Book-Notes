@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Book Notes.</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Bestsellers</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#" class="btn-nav">Shop Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Fresh Ideas for the <br> Modern Reader</h1>
+            <p>Discover our curated collection of business books designed to inspire, educate, and elevate your professional journey.</p>
+            <a href="#" class="btn-primary">Browse Collection</a>
+        </div>
+        <div class="hero-image">
+                    </div>
+    </section>
+
+    <section class="features">
+        <h2 class="section-title">New Arrivals</h2>
+        <div class="book-grid">
+            <% books.forEach(function(book) { %>
+                <div class="book-card">
+                    <div class="book-placeholder">Cover Image</div>
+                    <h3><%= book.title %></h3>
+                    <p><%= book.author %></p>
+                    <span class="price">$<%= book.price %></span>
+                </div>
+            <% }); %>
+            </div>
+    </section>
+
+    <section class="about">
+        <h2>About Our Mission</h2>
+        <p>We believe in the power of knowledge. Our bookstore is dedicated to providing the freshest and most professional business literature to help you succeed in a yellow, green, and bright world.</p>
+    </section>
+
+    <footer>
+        <p>&copy; <%= new Date().getFullYear() %> BookBusiness Demo. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
