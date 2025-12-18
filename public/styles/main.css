@@ -89,13 +89,28 @@
             align-items: center;
             justify-content: space-between;
             padding: 4rem 5%;
-            background-color: var(--off-white);
-            min-height: 80vh;
+            background-color: rgb(242, 221, 128);
+            height: 80vh;
+            /*background-image: url("/images/books.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;*/
         }
 
         .hero-content {
             flex: 1;
             padding-right: 2rem;
+        }
+        .hero-image{
+            display:flex;
+            align-items: center;
+
+        }
+        .hero-image img{
+            height: 50vh;
+            
+            border-width: 1rem;
+            border-color:#1A4D2E;
         }
 
         .hero h1 {
@@ -128,7 +143,7 @@
 
         .hero-image {
             flex: 1;
-            background-color: var(--dark-green);
+           
             height: 400px;
             width: 100%;
             border-radius: 10px; /* Placeholder for an actual book image */
@@ -139,18 +154,6 @@
             position: relative;
         }
         
-        .hero-image::after {
-            content: '';
-            position: absolute;
-            top: 20px;
-            left: -20px;
-            width: 100%;
-            height: 100%;
-            border: 2px solid var(--fresh-yellow);
-            border-radius: 10px;
-            z-index: -1;
-        }
-
         /* --- Featured Books (Dynamic EJS Section) --- */
         .features {
             padding: 5rem 5%;
@@ -242,6 +245,7 @@
             .hero {
                 flex-direction: column;
                 text-align: center;
+                height:100vh;
             }
             .hero-content {
                 padding-right: 0;
