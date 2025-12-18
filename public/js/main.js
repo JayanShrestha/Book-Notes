@@ -16,3 +16,14 @@ sr.reveal('header',{
     distance:"50px",
     origin:'bottom'
 });
+
+sr.reveal('.section-title',{
+    duration:2000,
+    distance:"50px",
+    origin:"bottom"
+});
+sr.reveal('.book-card',{
+    duration:3000,
+    distance:"50px",
+    origin:"bottom"
+});

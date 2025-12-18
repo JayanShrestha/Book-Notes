@@ -36,16 +36,19 @@
     </section>
 
     <section class="features">
-        <h2 class="section-title">New Arrivals</h2>
+        
+        <h2 class="section-title">Favourite Books</h2>
+        
         <div class="book-grid">
-            <% books.forEach(function(book) { %>
+            
+            <% books.forEach(function(book) { if(book.id>1){%>
                 <div class="book-card">
-                    <div class="book-placeholder">Cover Image</div>
+                    <div class="book-placeholder"><img src=<%= book.coverurl %>></div>
                     <h3><%= book.title %></h3>
                     <p><%= book.author %></p>
-                    <span class="price">$<%= book.price %></span>
+                    <span class="price"></span>
                 </div>
-            <% }); %>
+            <% }}); %>
             </div>
     </section>
 
