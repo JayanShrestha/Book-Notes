@@ -16,10 +16,10 @@
         <div class="logo">Book Notes.</div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Bestsellers</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">FAQs</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#" class="btn-nav">Shop Now</a></li>
+                <li><a href="#" class="btn-nav">Log in/Sign Up</a></li>
             </ul>
         </nav>
     </header>
@@ -28,7 +28,7 @@
         <div class="hero-content col-md-6 col-sm-12">
             <h1>Fresh Ideas for the <br> Modern Reader</h1>
             <p>Discover our curated collection of business books designed to inspire, educate, and elevate your professional journey.</p>
-            <a href="#" class="btn-primary">Browse Collection</a>
+            <a href="#collection" class="btn-primary">Browse Collection</a>
         </div>
         <div class="hero-image col-md-6 col-sm-12">
             <img src="/images/books.png">
@@ -39,9 +39,9 @@
         
         <h2 class="section-title">Favourite Books</h2>
         
-        <div class="book-grid">
+        <div class="book-grid" id="collection">
             
-            <% books.forEach(function(book) { if(book.id>1){%>
+            <% books.forEach(function(book) { if(book.id>1&&book.id<22){%>
                 <div class="book-card">
                     <div class="book-placeholder"><img src=<%= book.coverurl %>></div>
                     <h3><%= book.title %></h3>

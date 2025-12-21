@@ -262,6 +262,9 @@
                 padding-right: 0;
                 margin-bottom: 3rem;
             }
+            .hero-image img{
+                height:40vh;
+            }
             nav ul {
                 display: none; /* Simplified mobile view */
             }
