@@ -14,12 +14,16 @@
             padding: 0;
             box-sizing: border-box;
         }
+        html {
+  scroll-behavior: smooth;
+}
 
         body {
             font-family: 'Lato', sans-serif;
             color: var(--text-dark);
             background-color: var(--white);
             line-height: 1.6;
+            font-weight: bold;
         }
 
         h1, h2, h3 {
@@ -36,18 +40,6 @@
             list-style: none;
         }
 
-        /* --- Navigation --- */
-        header {
-            background-color: var(--white);
-            padding: 1.5rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 3px solid var(--fresh-yellow);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
 
         .logo {
             font-size: 1.5rem;
@@ -55,32 +47,22 @@
             color: var(--dark-green);
             letter-spacing: 1px;
         }
+       
 
         nav ul {
             display: flex;
             gap: 2rem;
         }
 
-        nav a {
-            color: var(--dark-green);
-            font-weight: 700;
-            transition: color 0.3s;
+        .nav-item a:hover {
+             background-color: var(--dark-green);
+            color: var(--fresh-yellow); /* Darker yellow on hover */
+            border-radius: 10px;
+            transform: translateY(-3px);
         }
-
-        nav a:hover {
-            color: #D4AC0D; /* Darker yellow on hover */
-        }
-
-        .btn-nav {
-            background-color: var(--dark-green);
-            color: var(--white);
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px;
-        }
-
-        .btn-nav:hover {
-            background-color: #143b22;
-            color: var(--fresh-yellow);
+        .nav-link.active{
+            background-color: var(--fresh-yellow);
+            border-radius: 4px;
         }
 
         /* --- Hero Section --- */
@@ -100,6 +82,10 @@
         .hero-content {
             flex: 1;
             padding-right: 2rem;
+            display:flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
         }
         .hero-image{
             display:flex;
@@ -138,7 +124,10 @@
 
         .btn-primary:hover {
             transform: translateY(-3px);
+            background-color: var(--dark-green);
+            color:var(--fresh-yellow);
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            text-decoration: none;
         }
 
         .hero-image {
@@ -263,7 +252,7 @@
                 margin-bottom: 3rem;
             }
             .hero-image img{
-                height:40vh;
+                height:35vh;
             }
             nav ul {
                 display: none; /* Simplified mobile view */

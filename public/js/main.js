@@ -11,7 +11,7 @@ sr.reveal('.hero-image',{
     origin:'top'
 });
 
-sr.reveal('header',{
+sr.reveal('nav',{
     duration:2000,
     distance:"50px",
     origin:'bottom'
