@@ -23,8 +23,8 @@ sr.reveal('.section-title',{
     origin:"bottom"
 });
 
-//Function for sorting the book data according to book title
-function sortDataTitle(){
+//Function for sorting the book data according to book title ascending order
+function sortDataTitleAsc(){
         const container = document.getElementById('collection');
         const cards = Array.from(container.getElementsByClassName('book-card'));
 
@@ -41,5 +41,25 @@ function sortDataTitle(){
 
         //push everything on the screen at once
         container.appendChild(fragment);//won't create duplicate and add the sorted the data to container
+
+    }
+
+    //Function for sorting the book data according to book title descending order
+    function sortDataTitleDesc(){
+        const container = document.getElementById('collection');
+        const cards = Array.from(container.getElementsByClassName('book-card'));
+
+        cards.sort((a,b)=>{
+            const titleA = a.querySelector('h3').innerText.toLowerCase();
+            const titleB = b.querySelector('h3').innerText.toLowerCase();
+            return titleB.localeCompare(titleA);
+        });
+
+        const fragment = document.createDocumentFragment();
+        cards.forEach(card=>fragment.appendChild(card));
+
+        //push everything on the screen at once
+        container.appendChild(fragment);
+
 
     }
