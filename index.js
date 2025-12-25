@@ -30,7 +30,6 @@ app.get("/",async (req,res)=>{
         try{
                 const books = await db.query("SELECT * from books");
                 const booksData = books.rows;
-                
                 res.render("index.ejs",{pageTitle: "Book Notes | Favourite Books",
                 books: booksData});
               

@@ -63,7 +63,14 @@
         .nav-link.active{
             background-color: var(--fresh-yellow);
             border-radius: 4px;
+            color:var(--dark-green);
         }
+        .nav-link.active:hover{
+            background-color: var(--fresh-yellow);
+            border-radius: 4px;
+            color:var(--dark-green);
+        }
+
 
         /* --- Hero Section --- */
         .hero {
@@ -257,4 +264,12 @@
             nav ul {
                 display: none; /* Simplified mobile view */
             }
+        }
+
+        @media (max-width: 576px) {
+            
+            .hero-image img{
+                height:23vh;
+            }
+          
         }
