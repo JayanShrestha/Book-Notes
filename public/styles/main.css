@@ -14,12 +14,16 @@
             padding: 0;
             box-sizing: border-box;
         }
+        html {
+  scroll-behavior: smooth;
+}
 
         body {
             font-family: 'Lato', sans-serif;
             color: var(--text-dark);
             background-color: var(--white);
             line-height: 1.6;
+            font-weight: bold;
         }
 
         h1, h2, h3 {
@@ -36,18 +40,6 @@
             list-style: none;
         }
 
-        /* --- Navigation --- */
-        header {
-            background-color: var(--white);
-            padding: 1.5rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 3px solid var(--fresh-yellow);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
 
         .logo {
             font-size: 1.5rem;
@@ -55,33 +47,30 @@
             color: var(--dark-green);
             letter-spacing: 1px;
         }
+       
 
         nav ul {
             display: flex;
             gap: 2rem;
         }
 
-        nav a {
-            color: var(--dark-green);
-            font-weight: 700;
-            transition: color 0.3s;
+        .nav-item a:hover {
+             background-color: var(--dark-green);
+            color: var(--fresh-yellow); /* Darker yellow on hover */
+            border-radius: 10px;
+            transform: translateY(-3px);
+        }
+        .nav-link.active{
+            background-color: var(--fresh-yellow);
+            border-radius: 4px;
+            color:var(--dark-green);
+        }
+        .nav-link.active:hover{
+            background-color: var(--fresh-yellow);
+            border-radius: 4px;
+            color:var(--dark-green);
         }
 
-        nav a:hover {
-            color: #D4AC0D; /* Darker yellow on hover */
-        }
-
-        .btn-nav {
-            background-color: var(--dark-green);
-            color: var(--white);
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px;
-        }
-
-        .btn-nav:hover {
-            background-color: #143b22;
-            color: var(--fresh-yellow);
-        }
 
         /* --- Hero Section --- */
         .hero {
@@ -100,6 +89,10 @@
         .hero-content {
             flex: 1;
             padding-right: 2rem;
+            display:flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
         }
         .hero-image{
             display:flex;
@@ -138,7 +131,10 @@
 
         .btn-primary:hover {
             transform: translateY(-3px);
+            background-color: var(--dark-green);
+            color:var(--fresh-yellow);
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            text-decoration: none;
         }
 
         .hero-image {
@@ -187,12 +183,23 @@
 
         .book-placeholder {
             height: 200px;
+            width:150px;
             background-color: #eee;
             margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #aaa;
+            margin:auto;
+        }
+        .book-placeholder img{
+            height: 200px;
+        }
+        .book-placeholder:hover{
+    
+        transform: scale(1.5);
+        transition: all .2s linear;
+
         }
 
         .book-card h3 {
@@ -251,7 +258,72 @@
                 padding-right: 0;
                 margin-bottom: 3rem;
             }
+            .hero-image img{
+                height:35vh;
+            }
             nav ul {
                 display: none; /* Simplified mobile view */
             }
+        }
+
+
+        /* form styling */
+        .form-signin{
+            width: 100%;
+            max-width: 420px;
+            padding: 15px;
+            margin: auto;
+
+        }
+        .btn-block{
+            display:block;
+            width:100%;}
+
+.toast {
+    border-radius: 8px;
+    width:80%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    font-family: sans-serif;
+    opacity:0;
+    margin: auto;
+   
+}
+
+        .show{
+        animation:show linear 0.5s forwards;
+        text-align: center;
+        }       
+        .hide{
+         animation:hide linear 0.5s forwards;
+        }
+@keyframes show{
+  0%{
+    opacity:0;
+    transform: translateY(-30px) scale(0.9);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0px) scale(1);
+  }
+}
+@keyframes hide{
+  0%{
+    opacity:1;
+    transform: translateY(0px) scale(1);
+  }
+  100%{
+    opacity:0;
+    transform: translateY(-30px) scale(0.9);
+  }
+}
+
+
+
+
+        @media (max-width: 576px) {
+            
+            .hero-image img{
+                height:23vh;
+            }
+          
         }
