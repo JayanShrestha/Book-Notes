@@ -63,3 +63,23 @@ function sortDataTitleAsc(){
 
 
     }
+//trigger the toast message
+const message ="User Exists! Please Try Logging in instead.";//message to display on toast message
+function showToast(message, duration = 5000) {
+    const toastContainer = document.getElementById('toast-container');
+    const toast = document.createElement('div');
+    toast.classList.add('toast');
+    toast.textContent = message;
+    toastContainer.appendChild(toast);
+
+    setTimeout(() => {
+        toast.classList.add('show');
+    }, 100);
+
+    setTimeout(() => {
+        toast.classList.add('hide');
+        setTimeout(() => {
+            toastContainer.remove();
+        }, 1000); // Match hide animation duration
+    }, duration);
+}

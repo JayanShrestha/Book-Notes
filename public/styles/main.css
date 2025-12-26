@@ -266,6 +266,60 @@
             }
         }
 
+
+        /* form styling */
+        .form-signin{
+            width: 100%;
+            max-width: 420px;
+            padding: 15px;
+            margin: auto;
+
+        }
+        .btn-block{
+            display:block;
+            width:100%;}
+
+.toast {
+    border-radius: 8px;
+    width:80%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    font-family: sans-serif;
+    opacity:0;
+    margin: auto;
+   
+}
+
+        .show{
+        animation:show linear 0.5s forwards;
+        text-align: center;
+        }       
+        .hide{
+         animation:hide linear 0.5s forwards;
+        }
+@keyframes show{
+  0%{
+    opacity:0;
+    transform: translateY(-30px) scale(0.9);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0px) scale(1);
+  }
+}
+@keyframes hide{
+  0%{
+    opacity:1;
+    transform: translateY(0px) scale(1);
+  }
+  100%{
+    opacity:0;
+    transform: translateY(-30px) scale(0.9);
+  }
+}
+
+
+
+
         @media (max-width: 576px) {
             
             .hero-image img{
